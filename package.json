@@ -1,0 +1,36 @@
+{
+  "name": "simple-google-oauthentication",
+  "version": "1.0.5",
+  "description": "Minimal setup Google OAuth 2.0 middleware for Express.js apps with automatic login, session, and logout.",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "test": "echo \"No tests yet\""
+  },
+  "keywords": [
+    "google",
+    "oauth",
+    "express",
+    "google-oauth",
+    "google-auth",
+    "express-middleware",
+    "login",
+    "session",
+    "jwt",
+    "authentication",
+    "simple"
+  ],
+  "author": "Yash Gautam",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "dependencies": {
+    "axios": "^1.6.0",
+    "cookie-parser": "^1.4.6",
+    "express": "^4.19.2",
+    "express-session": "^1.17.3",
+    "jsonwebtoken": "^9.0.2",
+    "querystring": "^0.2.1"
+  }
+}
