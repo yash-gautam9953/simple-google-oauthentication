@@ -26,7 +26,7 @@ No database. No boilerplate. Just **plug & play**. ⚡
     npm install simple-google-oauthentication
 
 
-⚡ Usage
+## ⚡ Usage
 
   1️⃣ Setup Middleware
 
@@ -66,7 +66,7 @@ No database. No boilerplate. Just **plug & play**. ⚡
   4. Logout with http://localhost:3000/auth/google/logout
 
 
-🧑‍💻 Example User Object
+## 🧑‍💻 Example User Object
 
     {
       "id": "1234567890",
@@ -80,7 +80,7 @@ No database. No boilerplate. Just **plug & play**. ⚡
     }
 
 
-🔐 Security Notes
+## 🔐 Security Notes
 
     JWT cookies are httpOnly (cannot be accessed by JS).
 
@@ -94,5 +94,6 @@ No database. No boilerplate. Just **plug & play**. ⚡
 
 ```bash
 npm install simple-google-oauthentication
+
 
 
