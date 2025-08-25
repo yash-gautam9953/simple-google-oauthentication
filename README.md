@@ -31,53 +31,53 @@ npm install simple-google-oauthentication
   1️⃣ Setup Middleware
 
     const express = require("express");
-const { simpleGoogleOAuth, login, logout, getUser } = require("simple-google-oauthentication");
+    const { simpleGoogleOAuth, login, logout, getUser } = require("simple-google-oauthentication");
 
-const app = express();
+    const app = express();
 
-// 🔧 Configure Google OAuth
-app.use(
-  simpleGoogleOAuth({
-    clientID: "YOUR_GOOGLE_CLIENT_ID",
-    clientSecret: "YOUR_GOOGLE_CLIENT_SECRET",
-    redirectURI: "http://localhost:3000/auth/google/callback",
-  })
-);
+    // 🔧 Configure Google OAuth
+    app.use(
+      simpleGoogleOAuth({
+      clientID: "YOUR_GOOGLE_CLIENT_ID",
+      clientSecret: "YOUR_GOOGLE_CLIENT_SECRET",
+      redirectURI: "http://localhost:3000/auth/google/callback",
+    })
+    );
 
-// 👤 Routes
-app.get("/", (req, res) => {
-  const user = getUser(req);
-  res.send(user ? `Welcome, ${user.email}!` : "Not logged in.");
-});
+    // 👤 Routes
+    app.get("/", (req, res) => {
+      const user = getUser(req);
+      res.send(user ? `Welcome, ${user.email}!` : "Not logged in.");
+    });
 
-app.get("/auth/google/login", login);
-app.get("/auth/google/logout", logout);
+    app.get("/auth/google/login", login);
+    app.get("/auth/google/logout", logout);
 
-app.listen(3000, () => console.log("✅ Server running on http://localhost:3000"));
+    app.listen(3000, () => console.log("✅ Server running on http://localhost:3000"));
 
 2️⃣ Flow in Action
 
-  Visit http://localhost:3000/auth/google/login → Redirects to Google
+  1. Visit http://localhost:3000/auth/google/login → Redirects to Google
 
-  Login with your Google account → Redirects back to /
+  2. Login with your Google account → Redirects back to /
 
-  req.user is now available everywhere 🎉
+  3. req.user is now available everywhere 🎉
 
-  Logout with http://localhost:3000/auth/google/logout
+  4. Logout with http://localhost:3000/auth/google/logout
 
 
 🧑‍💻 Example User Object
 
-  {
-  "id": "1234567890",
-  "email": "your-email@gmail.com",
-  "verified_email": true,
-  "name": "Your Name",
-  "given_name": "Your",
-  "family_name": "Name",
-  "picture": "https://lh3.googleusercontent.com/a-/profile.jpg",
-  "locale": "en"
-}
+    {
+      "id": "1234567890",
+      "email": "your-email@gmail.com",
+      "verified_email": true,
+      "name": "Your Name",
+      "given_name": "Your",
+      "family_name": "Name",
+      "picture": "https://lh3.googleusercontent.com/a-/profile.jpg",
+      "locale": "en"
+    }
 
 
 🔐 Security Notes
@@ -94,3 +94,4 @@ app.listen(3000, () => console.log("✅ Server running on http://localhost:3000"
 
 ```bash
 npm install simple-google-oauthentication
+
