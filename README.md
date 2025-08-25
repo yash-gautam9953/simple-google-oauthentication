@@ -23,7 +23,7 @@ No database. No boilerplate. Just **plug & play**. ⚡
 ---
 
 ## 📦 Installation
-npm install simple-google-oauthentication
+    npm install simple-google-oauthentication
 
 
 ⚡ Usage
@@ -94,4 +94,5 @@ npm install simple-google-oauthentication
 
 ```bash
 npm install simple-google-oauthentication
+
 
